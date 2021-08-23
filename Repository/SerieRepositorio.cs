@@ -12,12 +12,12 @@ namespace Dio.Series.Repository {
             list[id].setAtivo();
         }
 
-        public Serie GetById(int id)
+        public  Serie GetById(int id)
         {
             return list[id];
         }
 
-        public void Insert(Serie entity)
+        public  void Insert(Serie entity)
         {
             list.Add(entity);
         }
