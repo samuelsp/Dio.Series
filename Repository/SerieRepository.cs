@@ -1,9 +1,8 @@
 using System.Collections.Generic;
-using Dio.Series.Classes;
-using Dio.Series.Interfaces;
+using Dio.Series.Models;
 
 namespace Dio.Series.Repository {
-    public class SerieRepositorio : IRepository<Serie> {
+    public class SerieRepository : IRepositorySerie {
         
         private List<Serie> list = new List<Serie>();
         

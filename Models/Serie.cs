@@ -1,6 +1,7 @@
 using System;
+using Dio.Series.Models.Enums;
 
-namespace Dio.Series.Classes
+namespace Dio.Series.Models
 {
     public class Serie : Base
     {

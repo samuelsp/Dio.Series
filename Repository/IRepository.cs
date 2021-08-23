@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Dio.Series.Interfaces {
+namespace Dio.Series.Repository {
     public interface IRepository<T> {
         List<T> List();
         T GetById(int id);

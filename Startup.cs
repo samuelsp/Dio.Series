@@ -1,12 +1,18 @@
 using System;
-using Dio.Series.Application;
+using Dio.Series.Interfaces;
 
 namespace Dio.Series.Classes
 {
-    public static class Startup
-    {       
-       public static void Run() {
-           AppServiceSerie service = new AppServiceSerie();
+    public class Startup
+    {
+       private readonly IServiceSerie service;
+        
+       public Startup(IServiceSerie service)
+       {
+           this.service = service;
+       }       
+       public void Run() {
+           
            string opcao = service.ObterOpcaoDoUsuario();
 
            while(opcao.ToUpper() != "X")

@@ -1,13 +1,19 @@
 
 using System;
-using Dio.Series.Classes;
 using Dio.Series.Interfaces;
+using Dio.Series.Models;
+using Dio.Series.Models.Enums;
 using Dio.Series.Repository;
 
-namespace Dio.Series.Application {  
-    public class AppServiceSerie : IService<Serie> {
+namespace Dio.Series.Services {  
+    public class ServiceSerie : IServiceSerie {
 
-        IRepository<Serie> repositorio = new SerieRepositorio();        
+        private readonly IRepositorySerie repositorio; 
+
+        public ServiceSerie(IRepositorySerie repositorio)
+        {
+            this.repositorio = repositorio;
+        }       
         
         public void Atualizar()
         {

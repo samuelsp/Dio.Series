@@ -1,4 +1,4 @@
-namespace Dio.Series.Classes
+namespace Dio.Series.Models
 {
     public abstract class Base    
     {

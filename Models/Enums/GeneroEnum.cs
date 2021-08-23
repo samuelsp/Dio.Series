@@ -1,4 +1,4 @@
-namespace Dio.Series {
+namespace Dio.Series.Models.Enums {
     public enum GeneroEnum {
         Acao = 1,
 		Aventura = 2,
