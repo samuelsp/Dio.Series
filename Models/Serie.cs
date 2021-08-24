@@ -5,22 +5,12 @@ namespace Dio.Series.Models
 {
     public class Serie : Base
     {
-        private GeneroEnum Genero { get; set; }
-        private string Titulo { get; set; }
-        private string Descricao { get; set; }
-        private int Ano { get; set; }
-        private bool Ativo { get; set; }     
-
-        public Serie(int id, GeneroEnum genero, string titulo, string descricao, int ano)
-        {
-            this.Id = Id;
-            this.Genero = genero;
-            this.Titulo = titulo;
-            this.Descricao = descricao;
-            this.Ano = ano;
-            this.Ativo = true;
-        }
-
+        public GeneroEnum Genero { get; set; }
+        public string Titulo { get; set; }
+        public string Descricao { get; set; }
+        public int Ano { get; set; }
+        public bool Ativo { get; set; }     
+       
         public override string ToString()
         {
             string valoresPropriedades
@@ -36,21 +26,7 @@ namespace Dio.Series.Models
 
         }
 
-        public string getTitulo() {
-            return this.Titulo;
-        }
-
-        public int getId() {
-            return this.Id;
-        }
-
-        public void setAtivo() {
-            this.Ativo = false;
-        }
-
-        public bool getAtivo() {
-            return this.Ativo;
-        }
+        
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Dio.Series.Classes;
+using Dio.Series.Infra;
 using Dio.Series.Interfaces;
 using Dio.Series.Repository;
 using Dio.Series.Services;
@@ -12,6 +13,7 @@ namespace Dio.Series
             var services = new ServiceCollection();
             services.AddSingleton<IRepositorySerie, SerieRepository>();
             services.AddSingleton<IServiceSerie, ServiceSerie>();
+            services.AddSingleton<Context>();
             services.AddTransient<Startup>();
 
             return services.BuildServiceProvider();

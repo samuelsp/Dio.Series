@@ -39,13 +39,14 @@ namespace Dio.Series.Services {
            string descricao = Console.ReadLine();
 
            Serie serieAtualizada = new Serie
-           (
-               id: repositorio.NextId(),
-               genero: (GeneroEnum)genero,
-               titulo: titulo,
-               ano: ano,
-               descricao: descricao
-           );
+           {
+               Id = repositorio.NextId(),
+               Genero = (GeneroEnum)genero,
+               Titulo = titulo,
+               Ano = ano,
+               Descricao = descricao,
+               Ativo = true
+           };
 
            repositorio.Update(id, serieAtualizada);
 
@@ -82,8 +83,8 @@ namespace Dio.Series.Services {
 
             foreach (var serie in lista)
             {
-                var ativo = serie.getAtivo();
-                Console.WriteLine("#ID {0}: - {1} - {2}", serie.getId(), serie.getTitulo(), (ativo ? "*Ativo" : "*Inativo"));                
+                var ativo = serie.Ativo;
+                Console.WriteLine("#ID {0}: - {1} {2}", serie.Id, serie.Titulo, (ativo ? " " : " - inativo*"));                
             }
         }
 
@@ -109,13 +110,15 @@ namespace Dio.Series.Services {
            string descricao = Console.ReadLine();
 
            Serie novaSerie = new Serie
-           (
-               id: repositorio.NextId(),
-               genero: (GeneroEnum)genero,
-               titulo: titulo,
-               ano: ano,
-               descricao: descricao
-           );
+           {
+               Id = repositorio.NextId(),
+               Genero = (GeneroEnum)genero,
+               Titulo = titulo,
+               Ano = ano,
+               Descricao = descricao,
+               Ativo = true
+
+           };           
 
            repositorio.Insert(novaSerie);
         }
